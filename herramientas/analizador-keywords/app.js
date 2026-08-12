@@ -1,8 +1,17 @@
 /**
- * app.js — Analizador de Palabras Clave (básico, datos simulados)
- * Sin llamadas a API externas: usa un dataset local con volúmenes ficticios
- * pero realistas, más una heurística para keywords no listadas.
+ * app.js — Analizador de Palabras Clave
+ *
+ * Intenta obtener datos REALES de Google Trends a través de un Cloudflare
+ * Worker propio (ver /cloudflare-worker/README.md para desplegarlo). Si
+ * TRENDS_API_URL no está configurada, o la petición falla/tarda demasiado,
+ * la herramienta usa automáticamente el dataset local simulado como
+ * respaldo, para que nunca deje de funcionar.
  */
+
+// Pega aquí la URL de tu Worker tras desplegarlo (ver cloudflare-worker/README.md).
+// Ejemplo: 'https://creatortools-trends-proxy.tu-usuario.workers.dev'
+const TRENDS_API_URL = '';
+const TRENDS_FETCH_TIMEOUT_MS = 5000;
 
 const HISTORY_KEY = 'ct_keywords_historial';
 
@@ -127,6 +136,38 @@ function estimateKeyword(keyword) {
   return { volumen, dificultad, intencion };
 }
 
+/** Intenta consultar datos reales de Google Trends vía el Worker propio. Devuelve null si no está configurado o falla. */
+async function fetchRealTrends(keyword) {
+  if (!TRENDS_API_URL) return null;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TRENDS_FETCH_TIMEOUT_MS);
+
+  try {
+    const url = `${TRENDS_API_URL.replace(/\/$/, '')}/?q=${encodeURIComponent(keyword)}`;
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data || typeof data.interest !== 'number') return null;
+    return data;
+  } catch (err) {
+    return null;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+/** Deriva una dificultad e intención heurísticas a partir de una keyword real, ya que Trends no las provee */
+function heuristicMetaFor(keyword, interest) {
+  const normalized = keyword.trim().toLowerCase();
+  let intencion = 'informacional';
+  if (/comprar|precio|barato|oferta|contratar/.test(normalized)) intencion = 'transaccional';
+  else if (/login|iniciar sesión|acceso|oficial/.test(normalized)) intencion = 'navegacional';
+
+  const dificultad = interest >= 66 ? 'alta' : interest >= 33 ? 'media' : 'baja';
+  return { intencion, dificultad };
+}
+
 function relatedKeywords(keyword) {
   const hash = simpleHash(keyword.toLowerCase());
   const shuffled = [...RELATED_POOL].sort((a, b) => (simpleHash(a + hash) - simpleHash(b + hash)));
@@ -142,8 +183,7 @@ function intentionLabel(intencion) {
 }
 
 /** Genera 6 puntos de una "tendencia" simulada de los últimos 6 meses, sin librerías externas */
-function renderTrendChart(keyword, volumenBase) {
-  const svgContainer = document.getElementById('trend-chart');
+function simulatedTrendPoints(keyword, volumenBase) {
   const hash = simpleHash(keyword.toLowerCase());
   const points = [];
   for (let i = 0; i < 6; i++) {
@@ -151,10 +191,33 @@ function renderTrendChart(keyword, volumenBase) {
     const value = Math.max(10, Math.round(volumenBase * (1 + variation / 100)));
     points.push(value);
   }
-  const max = Math.max(...points);
+  return points;
+}
+
+/**
+ * Dibuja la tendencia. Si se pasa `realTimeline` (del Worker de Google Trends),
+ * la usa con sus fechas reales; si no, cae a 6 puntos simulados.
+ */
+function renderTrendChart(keyword, volumenBase, realTimeline) {
+  const svgContainer = document.getElementById('trend-chart');
+
+  let points;
+  let labels;
+  if (realTimeline && realTimeline.length) {
+    // Muestrea como máximo 6 puntos repartidos por todo el rango real recibido
+    const step = Math.max(1, Math.floor(realTimeline.length / 6));
+    const sampled = realTimeline.filter((_, i) => i % step === 0).slice(-6);
+    points = sampled.map((p) => p.value);
+    labels = sampled.map((p) => p.time);
+  } else {
+    points = simulatedTrendPoints(keyword, volumenBase);
+    labels = ['Hace 6m', 'Hace 5m', 'Hace 4m', 'Hace 3m', 'Hace 2m', 'Mes actual'];
+  }
+
+  const max = Math.max(...points, 1);
   const width = 300;
   const height = 100;
-  const stepX = width / (points.length - 1);
+  const stepX = width / Math.max(1, points.length - 1);
 
   const coords = points.map((v, i) => {
     const x = i * stepX;
@@ -162,10 +225,8 @@ function renderTrendChart(keyword, volumenBase) {
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   });
 
-  const months = ['Hace 6m', 'Hace 5m', 'Hace 4m', 'Hace 3m', 'Hace 2m', 'Mes actual'];
-
   svgContainer.innerHTML = `
-    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Tendencia de búsqueda estimada de los últimos 6 meses" style="width:100%;height:auto;">
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Tendencia de búsqueda de los últimos meses" style="width:100%;height:auto;">
       <polyline points="${coords.join(' ')}" fill="none" stroke="var(--color-accent, #0a8f5b)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       ${coords.map((c) => {
         const [x, y] = c.split(',');
@@ -173,34 +234,74 @@ function renderTrendChart(keyword, volumenBase) {
       }).join('')}
     </svg>
     <div class="tool-stats" style="margin-top:0.5rem;">
-      ${months.map((m, i) => `<div class="stat-box"><span class="value" style="font-size:1rem;">${points[i]}</span><span class="label">${m}</span></div>`).join('')}
+      ${labels.map((m, i) => `<div class="stat-box"><span class="value" style="font-size:1rem;">${points[i]}</span><span class="label">${m}</span></div>`).join('')}
     </div>
   `;
 }
 
-function renderResults(keyword) {
-  const data = estimateKeyword(keyword);
-  const related = relatedKeywords(keyword);
+async function renderResults(keyword) {
+  const real = await fetchRealTrends(keyword);
+  const relatedList = document.getElementById('related-list');
+  const sourceBadge = document.getElementById('kw-source-badge');
+  const volumeLabel = document.getElementById('kw-volume-label');
+  const trendHeading = document.getElementById('kw-trend-heading');
 
   document.getElementById('kw-title').textContent = `Resultados para "${keyword}"`;
-  document.getElementById('kw-volume').textContent = data.volumen.toLocaleString('es-ES');
-  document.getElementById('kw-intent').textContent = intentionLabel(data.intencion);
 
-  const diffEl = document.getElementById('kw-difficulty');
-  diffEl.textContent = cap(data.dificultad);
-  diffEl.className = `badge ${difficultyBadgeClass(data.dificultad)}`;
+  if (real) {
+    const meta = heuristicMetaFor(keyword, real.interest);
 
-  const relatedList = document.getElementById('related-list');
-  relatedList.innerHTML = '';
-  related.forEach((kw) => {
-    const li = document.createElement('li');
-    li.className = 'result-item';
-    li.innerHTML = `<div class="result-text">${kw}</div><div class="result-actions"><button type="button" class="icon-btn btn-copy" aria-label="Copiar palabra clave">📋</button></div>`;
-    li.querySelector('.btn-copy').addEventListener('click', () => copyToClipboard(kw));
-    relatedList.appendChild(li);
-  });
+    sourceBadge.textContent = 'Datos: Google Trends';
+    sourceBadge.className = 'badge badge-good';
+    volumeLabel.textContent = 'Interés de búsqueda (0-100, Google Trends)';
+    trendHeading.textContent = 'Tendencia real (Google Trends, últimos 12 meses)';
 
-  renderTrendChart(keyword, data.volumen);
+    document.getElementById('kw-volume').textContent = real.interest.toLocaleString('es-ES');
+    document.getElementById('kw-intent').textContent = intentionLabel(meta.intencion) + ' (estimada)';
+
+    const diffEl = document.getElementById('kw-difficulty');
+    diffEl.textContent = cap(meta.dificultad) + ' (estimada)';
+    diffEl.className = `badge ${difficultyBadgeClass(meta.dificultad)}`;
+
+    const related = real.related && real.related.length ? real.related : relatedKeywords(keyword);
+    relatedList.innerHTML = '';
+    related.forEach((kw) => {
+      const li = document.createElement('li');
+      li.className = 'result-item';
+      li.innerHTML = `<div class="result-text">${kw}</div><div class="result-actions"><button type="button" class="icon-btn btn-copy" aria-label="Copiar palabra clave">📋</button></div>`;
+      li.querySelector('.btn-copy').addEventListener('click', () => copyToClipboard(kw));
+      relatedList.appendChild(li);
+    });
+
+    renderTrendChart(keyword, real.interest, real.timeline);
+  } else {
+    const data = estimateKeyword(keyword);
+    const related = relatedKeywords(keyword);
+
+    sourceBadge.textContent = 'Datos: estimación simulada';
+    sourceBadge.className = 'badge badge-warn';
+    volumeLabel.textContent = 'Volumen mensual estimado';
+    trendHeading.textContent = 'Tendencia estimada (6 meses)';
+
+    document.getElementById('kw-volume').textContent = data.volumen.toLocaleString('es-ES');
+    document.getElementById('kw-intent').textContent = intentionLabel(data.intencion);
+
+    const diffEl = document.getElementById('kw-difficulty');
+    diffEl.textContent = cap(data.dificultad);
+    diffEl.className = `badge ${difficultyBadgeClass(data.dificultad)}`;
+
+    relatedList.innerHTML = '';
+    related.forEach((kw) => {
+      const li = document.createElement('li');
+      li.className = 'result-item';
+      li.innerHTML = `<div class="result-text">${kw}</div><div class="result-actions"><button type="button" class="icon-btn btn-copy" aria-label="Copiar palabra clave">📋</button></div>`;
+      li.querySelector('.btn-copy').addEventListener('click', () => copyToClipboard(kw));
+      relatedList.appendChild(li);
+    });
+
+    renderTrendChart(keyword, data.volumen);
+  }
+
   document.getElementById('results-section').hidden = false;
 }
 

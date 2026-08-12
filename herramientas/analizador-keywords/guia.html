@@ -57,8 +57,11 @@
 
   <div class="post-content">
     <div class="container container-narrow">
-      <h2>1. Volumen de búsqueda estimado</h2>
-      <p>Es el número aproximado de búsquedas mensuales para esa palabra clave. Usamos un dataset con volúmenes de referencia para keywords populares; para el resto, generamos una estimación orientativa. No sustituye a herramientas profesionales como Google Keyword Planner, pero sirve para comparar ideas rápidamente.</p>
+      <h2>0. De dónde vienen los datos</h2>
+      <p>Cada resultado muestra una etiqueta junto al título: <span class="badge badge-good">Datos: Google Trends</span> cuando la herramienta consiguió consultar el interés de búsqueda real de Google Trends (a través de un proxy propio), o <span class="badge badge-warn">Datos: estimación simulada</span> cuando no fue posible y se usó nuestro dataset local de respaldo. Así siempre sabes con qué tipo de dato estás trabajando.</p>
+
+      <h2>1. Volumen / interés de búsqueda</h2>
+      <p>Con datos reales, este número es el <strong>índice de interés de Google Trends (0-100)</strong>, relativo al pico de popularidad del término en los últimos 12 meses — no es el número exacto de búsquedas mensuales, porque Google no ofrece esa cifra exacta de forma gratuita. Con datos simulados, es una estimación orientativa generada localmente. En ambos casos, útil para comparar ideas rápidamente, no para sustituir herramientas profesionales de pago.</p>
 
       <h2>2. Intención de búsqueda</h2>
       <ul>
@@ -66,10 +69,10 @@
         <li><strong>Transaccional:</strong> el usuario quiere comprar o contratar (ej. "comprar bicicleta eléctrica").</li>
         <li><strong>Navegacional:</strong> el usuario busca una marca o sitio concreto (ej. "iniciar sesión gmail").</li>
       </ul>
-      <p>Escribe contenido alineado con la intención: un artículo informativo para keywords informacionales, una página de producto para transaccionales.</p>
+      <p>Escribe contenido alineado con la intención: un artículo informativo para keywords informacionales, una página de producto para transaccionales. Esta clasificación siempre es heurística (basada en patrones del texto), tanto con datos reales como simulados, porque Google Trends tampoco expone la intención de búsqueda.</p>
 
       <h2>3. Dificultad estimada</h2>
-      <p>Indica cuánta competencia tiene esa keyword en los resultados de búsqueda: <span class="badge badge-good">baja</span> significa que es más fácil posicionar, <span class="badge badge-bad">alta</span> indica mucha competencia de sitios establecidos.</p>
+      <p>Indica cuánta competencia tiene esa keyword en los resultados de búsqueda: <span class="badge badge-good">baja</span> significa que es más fácil posicionar, <span class="badge badge-bad">alta</span> indica mucha competencia de sitios establecidos. Al igual que la intención, es siempre una estimación (con datos reales, derivada del nivel de interés; con datos simulados, del propio dataset).</p>
 
       <h2>4. Keywords relacionadas</h2>
       <p>Úsalas como subtítulos (H2/H3) dentro de tu artículo para cubrir el tema en profundidad y capturar búsquedas relacionadas (SEO semántico).</p>

@@ -57,7 +57,7 @@
     <div class="container">
       <p class="breadcrumb"><a href="../../">Inicio</a> / <a href="../">Herramientas</a> / Analizador de Keywords</p>
       <h1>Analizador de Palabras Clave</h1>
-      <p class="lead">Introduce una palabra clave y obtén volumen de búsqueda estimado, intención, dificultad y keywords relacionadas. Datos simulados con fines orientativos.</p>
+      <p class="lead">Introduce una palabra clave y obtén su interés de búsqueda, intención, dificultad y keywords relacionadas. Usa datos reales de Google Trends cuando están disponibles, con una estimación simulada como respaldo.</p>
     </div>
   </div>
 
@@ -78,12 +78,15 @@
       </div>
 
       <section id="results-section" class="tool-panel" hidden aria-labelledby="kw-title">
-        <h2 id="kw-title">Resultados</h2>
+        <div class="tool-actions" style="justify-content:space-between;">
+          <h2 id="kw-title" style="margin:0;">Resultados</h2>
+          <span id="kw-source-badge" class="badge">—</span>
+        </div>
 
         <div class="tool-stats">
           <div class="stat-box">
             <span class="value" id="kw-volume">—</span>
-            <span class="label">Volumen mensual estimado</span>
+            <span class="label" id="kw-volume-label">Volumen mensual estimado</span>
           </div>
           <div class="stat-box">
             <span class="value" id="kw-intent">—</span>
@@ -95,7 +98,7 @@
           </div>
         </div>
 
-        <h3>Tendencia estimada (6 meses)</h3>
+        <h3 id="kw-trend-heading">Tendencia estimada (6 meses)</h3>
         <div id="trend-chart" aria-hidden="false"></div>
 
         <h3>Keywords relacionadas</h3>
