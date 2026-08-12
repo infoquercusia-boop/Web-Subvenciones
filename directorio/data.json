@@ -17,8 +17,13 @@
       "Contrato de alquiler de vivienda habitual",
       "Empadronamiento en la vivienda objeto de la ayuda"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de arrendamiento", "Justificante de ingresos", "Certificado de empadronamiento"],
-    "enlace": "https://www.mivau.gob.es/vivienda/ayudas-alquiler-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de arrendamiento",
+      "Justificante de ingresos",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.mivau.gob.es/",
     "estado": "En plazo",
     "dificultad": "media",
     "resolucion_estimada": "Diciembre 2026"
@@ -41,8 +46,13 @@
       "Renta del alquiler no superior a 1.100€ mensuales",
       "No ser propietario de otra vivienda"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de arrendamiento", "Declaración de la renta", "Vida laboral"],
-    "enlace": "https://www.comunidad.madrid/servicios/vivienda/bono-alquiler-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de arrendamiento",
+      "Declaración de la renta",
+      "Vida laboral"
+    ],
+    "enlace": "https://www.comunidad.madrid/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Octubre 2026"
@@ -65,8 +75,13 @@
       "Alta en el Régimen Especial de Trabajadores Autónomos (RETA)",
       "Presentar plan de empresa viable"
     ],
-    "documentosRequeridos": ["DNI", "Plan de empresa", "Alta en RETA", "Certificado de desempleo"],
-    "enlace": "https://www.sepe.es/HomeSepe/autonomos/subvenciones-jovenes",
+    "documentosRequeridos": [
+      "DNI",
+      "Plan de empresa",
+      "Alta en RETA",
+      "Certificado de desempleo"
+    ],
+    "enlace": "https://www.sepe.es/",
     "estado": "En plazo",
     "dificultad": "alta",
     "resolucion_estimada": "Marzo 2027"
@@ -89,8 +104,13 @@
       "No haber recibido ayudas de minimis superiores al límite anual",
       "Realizar el test de autodiagnóstico digital"
     ],
-    "documentosRequeridos": ["DNI", "IAE", "Certificado de estar al corriente con Hacienda", "Certificado de la Seguridad Social"],
-    "enlace": "https://www.acelerapyme.gob.es/kit-digital",
+    "documentosRequeridos": [
+      "DNI",
+      "IAE",
+      "Certificado de estar al corriente con Hacienda",
+      "Certificado de la Seguridad Social"
+    ],
+    "enlace": "https://www.acelerapyme.gob.es/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Junio 2027"
@@ -113,8 +133,13 @@
       "Aceptación por parte de una entidad de acogida en el extranjero",
       "No haber disfrutado de otra beca Erasmus+ en el mismo curso"
     ],
-    "documentosRequeridos": ["DNI o pasaporte", "Carta de aceptación", "Matrícula académica", "Seguro de viaje"],
-    "enlace": "https://www.injuve.es/erasmus-plus",
+    "documentosRequeridos": [
+      "DNI o pasaporte",
+      "Carta de aceptación",
+      "Matrícula académica",
+      "Seguro de viaje"
+    ],
+    "enlace": "https://www.injuve.es/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Abril 2027"
@@ -137,8 +162,13 @@
       "Renta familiar dentro de los umbrales establecidos",
       "Superar el número mínimo de créditos del curso anterior"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Declaración de la renta familiar", "Certificado académico"],
-    "enlace": "https://www.becaseducacion.gob.es/becas-generales",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Declaración de la renta familiar",
+      "Certificado académico"
+    ],
+    "enlace": "https://www.becaseducacion.gob.es/",
     "estado": "En plazo",
     "dificultad": "baja",
     "resolucion_estimada": "Marzo 2027"
@@ -161,8 +191,13 @@
       "Ingresos no superiores a 3 veces el IPREM",
       "Vivienda arrendada como residencia habitual"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Justificante de ingresos", "Certificado de empadronamiento"],
-    "enlace": "https://www.juntadeandalucia.es/fomento/alquiler-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Justificante de ingresos",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.juntadeandalucia.es/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Enero 2027"
@@ -185,8 +220,13 @@
       "Proyecto de autoempleo o creación de empresa",
       "No haber ejercido la misma actividad en los 12 meses anteriores"
     ],
-    "documentosRequeridos": ["DNI", "Plan de negocio", "Alta censal", "Vida laboral"],
-    "enlace": "https://www.juntadeandalucia.es/empleo/emprende-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Plan de negocio",
+      "Alta censal",
+      "Vida laboral"
+    ],
+    "enlace": "https://www.juntadeandalucia.es/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Marzo 2027"
@@ -209,8 +249,13 @@
       "Matriculado en universidad pública andaluza",
       "No estar becado por otro organismo público"
     ],
-    "documentosRequeridos": ["DNI", "Expediente académico", "Matrícula", "Declaración jurada"],
-    "enlace": "https://www.juntadeandalucia.es/universidad/becas-excelencia",
+    "documentosRequeridos": [
+      "DNI",
+      "Expediente académico",
+      "Matrícula",
+      "Declaración jurada"
+    ],
+    "enlace": "https://www.juntadeandalucia.es/",
     "estado": "Proximamente",
     "dificultad": "alta",
     "resolucion_estimada": "Febrero 2027"
@@ -233,8 +278,13 @@
       "Programa de movilidad europea o internacional acreditado",
       "No haber disfrutado de ayuda similar en los últimos 2 años"
     ],
-    "documentosRequeridos": ["DNI", "Carta de admisión", "Empadronamiento", "Seguro médico"],
-    "enlace": "https://www.juntadeandalucia.es/iaj/movilidad-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Carta de admisión",
+      "Empadronamiento",
+      "Seguro médico"
+    ],
+    "enlace": "https://www.juntadeandalucia.es/",
     "estado": "Cerrado",
     "dificultad": "baja",
     "resolucion_estimada": "Septiembre 2026"
@@ -257,8 +307,13 @@
       "Contrato de arrendamiento vigente",
       "Ingresos no superiores a 3,5 veces el IPREM"
     ],
-    "documentosRequeridos": ["DNI/NIE", "Contrato de alquiler", "Justificante de ingresos", "Certificado de convivencia"],
-    "enlace": "https://www.gencat.cat/habitatge/bojove",
+    "documentosRequeridos": [
+      "DNI/NIE",
+      "Contrato de alquiler",
+      "Justificante de ingresos",
+      "Certificado de convivencia"
+    ],
+    "enlace": "https://www.gencat.cat/",
     "estado": "Resuelto",
     "dificultad": "media",
     "resolucion_estimada": "Julio 2026"
@@ -281,8 +336,13 @@
       "Proyecto empresarial innovador",
       "Formación mínima de FP superior o universitaria"
     ],
-    "documentosRequeridos": ["DNI/NIE", "Plan de empresa", "Titulación académica", "Presupuesto de inversión"],
-    "enlace": "https://www.gencat.cat/empresa/catalunya-empren-jove",
+    "documentosRequeridos": [
+      "DNI/NIE",
+      "Plan de empresa",
+      "Titulación académica",
+      "Presupuesto de inversión"
+    ],
+    "enlace": "https://www.gencat.cat/",
     "estado": "Cerrado",
     "dificultad": "alta",
     "resolucion_estimada": "Diciembre 2026"
@@ -305,8 +365,13 @@
       "Renta familiar dentro de los umbrales de equidad",
       "Rendimiento académico mínimo del curso anterior"
     ],
-    "documentosRequeridos": ["DNI/NIE", "Matrícula", "Declaración de la renta", "Certificado académico"],
-    "enlace": "https://www.gencat.cat/agaur/beques-equitat",
+    "documentosRequeridos": [
+      "DNI/NIE",
+      "Matrícula",
+      "Declaración de la renta",
+      "Certificado académico"
+    ],
+    "enlace": "https://www.gencat.cat/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Enero 2027"
@@ -329,8 +394,13 @@
       "Programa de prácticas o estudios en el extranjero",
       "Duración mínima de la estancia de 1 mes"
     ],
-    "documentosRequeridos": ["DNI/NIE", "Carta de admisión", "Justificante de la estancia", "Seguro de viaje"],
-    "enlace": "https://www.gencat.cat/joventut/mobilitat",
+    "documentosRequeridos": [
+      "DNI/NIE",
+      "Carta de admisión",
+      "Justificante de la estancia",
+      "Seguro de viaje"
+    ],
+    "enlace": "https://www.gencat.cat/",
     "estado": "Proximamente",
     "dificultad": "baja",
     "resolucion_estimada": "Mayo 2027"
@@ -353,8 +423,13 @@
       "Contrato de arrendamiento como vivienda habitual",
       "Ingresos no superiores a 3 veces el IPREM"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Vida laboral", "Justificante de ingresos"],
-    "enlace": "https://www.gva.es/va/inicio/procedimientos/vivienda/ayuda-alquiler-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Vida laboral",
+      "Justificante de ingresos"
+    ],
+    "enlace": "https://www.gva.es/",
     "estado": "En plazo",
     "dificultad": "media",
     "resolucion_estimada": "Enero 2027"
@@ -377,8 +452,13 @@
       "Proyecto empresarial con memoria económica",
       "No haber estado de alta en los 6 meses anteriores"
     ],
-    "documentosRequeridos": ["DNI", "Memoria del proyecto", "Alta en RETA", "IAE"],
-    "enlace": "https://www.ivace.es/emprendimiento-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Memoria del proyecto",
+      "Alta en RETA",
+      "IAE"
+    ],
+    "enlace": "https://www.ivace.es/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Abril 2027"
@@ -401,8 +481,13 @@
       "Renta familiar dentro de los umbrales",
       "Nota media mínima de 6,0"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Declaración de la renta", "Expediente académico"],
-    "enlace": "https://www.gva.es/va/inicio/procedimientos/educacio/beques-universitaries",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Declaración de la renta",
+      "Expediente académico"
+    ],
+    "enlace": "https://www.gva.es/",
     "estado": "Proximamente",
     "dificultad": "baja",
     "resolucion_estimada": "Enero 2027"
@@ -425,8 +510,13 @@
       "Programa de estudios o prácticas fuera de España",
       "Duración mínima de 3 semanas"
     ],
-    "documentosRequeridos": ["DNI", "Carta de aceptación", "Empadronamiento", "Seguro de viaje"],
-    "enlace": "https://www.ivaj.gva.es/mobilitat-jove",
+    "documentosRequeridos": [
+      "DNI",
+      "Carta de aceptación",
+      "Empadronamiento",
+      "Seguro de viaje"
+    ],
+    "enlace": "https://ivaj.gva.es/",
     "estado": "Cerrado",
     "dificultad": "baja",
     "resolucion_estimada": "Julio 2026"
@@ -449,8 +539,13 @@
       "Contrato de alquiler de vivienda habitual",
       "Ingresos dentro de los límites Etxebide"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Inscripción Etxebide", "Justificante de ingresos"],
-    "enlace": "https://www.euskadi.eus/ayudas/gazte-etxebizitza",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Inscripción Etxebide",
+      "Justificante de ingresos"
+    ],
+    "enlace": "https://www.euskadi.eus/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Septiembre 2026"
@@ -473,8 +568,13 @@
       "Plan de viabilidad económica",
       "Proyecto de nueva creación o menos de 2 años de antigüedad"
     ],
-    "documentosRequeridos": ["DNI", "Plan de viabilidad", "Escritura de constitución o alta autónomo", "Presupuesto"],
-    "enlace": "https://www.spri.eus/gazte-ekin",
+    "documentosRequeridos": [
+      "DNI",
+      "Plan de viabilidad",
+      "Escritura de constitución o alta autónomo",
+      "Presupuesto"
+    ],
+    "enlace": "https://www.spri.eus/",
     "estado": "Proximamente",
     "dificultad": "alta",
     "resolucion_estimada": "Mayo 2027"
@@ -497,8 +597,13 @@
       "Renta familiar dentro de los umbrales establecidos",
       "Empadronado en Euskadi al menos 1 año"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Declaración de la renta", "Certificado de empadronamiento"],
-    "enlace": "https://www.euskadi.eus/ayudas/becas-hezkuntza",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Declaración de la renta",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.euskadi.eus/",
     "estado": "En plazo",
     "dificultad": "baja",
     "resolucion_estimada": "Diciembre 2026"
@@ -521,8 +626,13 @@
       "Proyecto de movilidad internacional acreditado",
       "No haber recibido esta ayuda en la convocatoria anterior"
     ],
-    "documentosRequeridos": ["DNI", "Carta de admisión", "Empadronamiento", "Seguro médico"],
-    "enlace": "https://www.gazteaukera.euskadi.eus/gaztemundu",
+    "documentosRequeridos": [
+      "DNI",
+      "Carta de admisión",
+      "Empadronamiento",
+      "Seguro médico"
+    ],
+    "enlace": "https://www.gazteaukera.euskadi.eus/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Junio 2027"
@@ -545,8 +655,13 @@
       "Contrato de alquiler de vivienda habitual",
       "Ingresos no superiores a 3 veces el IPREM"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Certificado de empadronamiento", "Justificante de ingresos"],
-    "enlace": "https://www.xunta.gal/igvs/bono-aluguer-xove",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Certificado de empadronamiento",
+      "Justificante de ingresos"
+    ],
+    "enlace": "https://www.xunta.gal/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Octubre 2026"
@@ -569,8 +684,13 @@
       "Alta como autónomo en los últimos 6 meses",
       "Plan de negocio presentado"
     ],
-    "documentosRequeridos": ["DNI", "Plan de negocio", "Alta en RETA", "Certificado de empadronamiento"],
-    "enlace": "https://www.xunta.gal/xuventude/emprende-xuventude",
+    "documentosRequeridos": [
+      "DNI",
+      "Plan de negocio",
+      "Alta en RETA",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.xunta.gal/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Marzo 2027"
@@ -593,8 +713,13 @@
       "Renta familiar dentro de los umbrales",
       "Superación del 65% de los créditos matriculados"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Declaración de la renta", "Certificado académico"],
-    "enlace": "https://www.edu.xunta.gal/bolsas-universitarias",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Declaración de la renta",
+      "Certificado académico"
+    ],
+    "enlace": "https://www.edu.xunta.gal/",
     "estado": "Proximamente",
     "dificultad": "baja",
     "resolucion_estimada": "Enero 2027"
@@ -617,8 +742,13 @@
       "Contrato de alquiler vigente",
       "Ingresos no superiores a 3 veces el IPREM"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Justificante de ingresos", "Certificado de empadronamiento"],
-    "enlace": "https://www.jcyl.es/fomento/bono-vivienda-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Justificante de ingresos",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.jcyl.es/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Septiembre 2026"
@@ -641,8 +771,13 @@
       "Proyecto de emprendimiento con memoria económica",
       "No haber sido autónomo en la misma actividad los últimos 12 meses"
     ],
-    "documentosRequeridos": ["DNI", "Memoria del proyecto", "Alta en RETA", "IAE"],
-    "enlace": "https://www.jcyl.es/ade/lanzadera-emprendedora-rural",
+    "documentosRequeridos": [
+      "DNI",
+      "Memoria del proyecto",
+      "Alta en RETA",
+      "IAE"
+    ],
+    "enlace": "https://www.jcyl.es/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Abril 2027"
@@ -665,8 +800,13 @@
       "Renta familiar dentro de los umbrales",
       "No repetir curso más de una vez"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Declaración de la renta", "Certificado académico"],
-    "enlace": "https://www.jcyl.es/educacion/becas-fp",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Declaración de la renta",
+      "Certificado académico"
+    ],
+    "enlace": "https://www.jcyl.es/",
     "estado": "Proximamente",
     "dificultad": "baja",
     "resolucion_estimada": "Enero 2027"
@@ -689,8 +829,13 @@
       "Necesidad de desplazamiento entre islas o a la península por estudios",
       "Matrícula en curso vigente"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula", "Certificado de empadronamiento", "Justificante de desplazamiento"],
-    "enlace": "https://www.gobiernodecanarias.org/juventud/bono-movilidad",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula",
+      "Certificado de empadronamiento",
+      "Justificante de desplazamiento"
+    ],
+    "enlace": "https://www.gobiernodecanarias.org/",
     "estado": "Cerrado",
     "dificultad": "baja",
     "resolucion_estimada": "Julio 2026"
@@ -713,8 +858,13 @@
       "Alta como autónomo o sociedad de reciente creación",
       "Proyecto que genere al menos un puesto de trabajo"
     ],
-    "documentosRequeridos": ["DNI", "Plan de empresa", "Alta en RETA o escritura", "Vida laboral"],
-    "enlace": "https://www.gobiernodecanarias.org/sodecan/emprende-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Plan de empresa",
+      "Alta en RETA o escritura",
+      "Vida laboral"
+    ],
+    "enlace": "https://www.gobiernodecanarias.org/",
     "estado": "Proximamente",
     "dificultad": "media",
     "resolucion_estimada": "Mayo 2027"
@@ -737,8 +887,13 @@
       "Contrato de arrendamiento de vivienda habitual",
       "Ingresos no superiores a 3 veces el IPREM"
     ],
-    "documentosRequeridos": ["DNI", "Contrato de alquiler", "Justificante de ingresos", "Certificado de empadronamiento"],
-    "enlace": "https://www.aragon.es/vivienda/ayuda-alquiler-joven",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato de alquiler",
+      "Justificante de ingresos",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.aragon.es/",
     "estado": "Cerrado",
     "dificultad": "media",
     "resolucion_estimada": "Agosto 2026"
@@ -761,8 +916,13 @@
       "Beneficiario de una beca Erasmus+ en el curso vigente",
       "Complemento por bajo nivel de renta familiar"
     ],
-    "documentosRequeridos": ["DNI", "Resolución de beca Erasmus+", "Declaración de la renta", "Certificado de empadronamiento"],
-    "enlace": "https://www.aragon.es/juventud/becas-erasmus-complementaria",
+    "documentosRequeridos": [
+      "DNI",
+      "Resolución de beca Erasmus+",
+      "Declaración de la renta",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.aragon.es/",
     "estado": "Proximamente",
     "dificultad": "baja",
     "resolucion_estimada": "Marzo 2027"
@@ -785,8 +945,13 @@
       "Oferta de empleo o prácticas en otro país de la UE",
       "Participar en el programa Tu Primer Trabajo EURES"
     ],
-    "documentosRequeridos": ["DNI", "Contrato o carta de oferta", "Certificado de demandante de empleo", "Cuenta bancaria"],
-    "enlace": "https://www.sepe.es/eures/tu-primer-trabajo",
+    "documentosRequeridos": [
+      "DNI",
+      "Contrato o carta de oferta",
+      "Certificado de demandante de empleo",
+      "Cuenta bancaria"
+    ],
+    "enlace": "https://www.injuve.es/",
     "estado": "En plazo",
     "dificultad": "media",
     "resolucion_estimada": "Febrero 2027"
@@ -809,8 +974,13 @@
       "Realizar una mejora de al menos una letra en la calificación energética",
       "Vivienda construida antes de 2007"
     ],
-    "documentosRequeridos": ["DNI", "Escritura de propiedad", "Certificado energético antes/después", "Presupuesto de obra"],
-    "enlace": "https://www.idae.es/ayudas/rehabilitacion-energetica-jovenes",
+    "documentosRequeridos": [
+      "DNI",
+      "Escritura de propiedad",
+      "Certificado energético antes/después",
+      "Presupuesto de obra"
+    ],
+    "enlace": "https://www.idae.es/",
     "estado": "En plazo",
     "dificultad": "alta",
     "resolucion_estimada": "Julio 2027"
@@ -833,10 +1003,184 @@
       "Matrícula en curso de idiomas o certificación profesional homologada",
       "No haber recibido esta ayuda en los últimos 2 años"
     ],
-    "documentosRequeridos": ["DNI", "Matrícula del curso", "Certificado de empleo/desempleo", "Justificante de pago"],
-    "enlace": "https://www.injuve.es/becas-idiomas-certificaciones",
+    "documentosRequeridos": [
+      "DNI",
+      "Matrícula del curso",
+      "Certificado de empleo/desempleo",
+      "Justificante de pago"
+    ],
+    "enlace": "https://www.becaseducacion.gob.es/",
     "estado": "Resuelto",
     "dificultad": "baja",
     "resolucion_estimada": "Junio 2026"
+  },
+  {
+    "id": "sub-036",
+    "nombre": "Bono Cultural Joven 2026",
+    "entidad": "Ministerio de Cultura y Deporte",
+    "tipo": "educacion",
+    "comunidad": "Nacional",
+    "cantidad": "400€",
+    "cantidadMin": 400,
+    "cantidadMax": 400,
+    "edadMinima": 18,
+    "edadMaxima": 18,
+    "plazoApertura": "01/01/2026",
+    "plazoSolicitud": "31/12/2026",
+    "requisitos": [
+      "Cumplir 18 años durante 2026",
+      "Residir legalmente en España",
+      "No haber solicitado el bono en una convocatoria anterior"
+    ],
+    "documentosRequeridos": [
+      "DNI",
+      "Certificado de empadronamiento",
+      "Cuenta bancaria o método de pago digital"
+    ],
+    "enlace": "https://www.culturaydeporte.gob.es/",
+    "estado": "En plazo",
+    "dificultad": "baja",
+    "resolucion_estimada": "Concesión automática tras solicitud (2-5 días)"
+  },
+  {
+    "id": "sub-037",
+    "nombre": "Verano Joven 2026 (campamentos y actividades subvencionadas)",
+    "entidad": "Comunidad de Madrid",
+    "tipo": "educacion",
+    "comunidad": "Madrid",
+    "cantidad": "Hasta 300€ (descuento en plaza)",
+    "cantidadMin": 0,
+    "cantidadMax": 300,
+    "edadMinima": 14,
+    "edadMaxima": 30,
+    "plazoApertura": "01/03/2026",
+    "plazoSolicitud": "15/05/2026",
+    "requisitos": [
+      "Edad entre 14 y 30 años",
+      "Empadronamiento en la Comunidad de Madrid",
+      "Plazas limitadas por orden de solicitud"
+    ],
+    "documentosRequeridos": [
+      "DNI",
+      "Certificado de empadronamiento",
+      "Carné Joven (si se dispone)"
+    ],
+    "enlace": "https://www.comunidad.madrid/",
+    "estado": "Cerrado",
+    "dificultad": "baja",
+    "resolucion_estimada": "Junio 2026"
+  },
+  {
+    "id": "sub-038",
+    "nombre": "Garantía Juvenil - Ayuda al Primer Empleo 2026-2027",
+    "entidad": "Servicio Público de Empleo Estatal (SEPE)",
+    "tipo": "emprendimiento",
+    "comunidad": "Nacional",
+    "cantidad": "3000-6000€",
+    "cantidadMin": 3000,
+    "cantidadMax": 6000,
+    "edadMinima": 16,
+    "edadMaxima": 29,
+    "plazoApertura": "01/09/2026",
+    "plazoSolicitud": "31/01/2027",
+    "requisitos": [
+      "Inscripción en el Sistema Nacional de Garantía Juvenil",
+      "No estar trabajando ni estudiando en el momento de la inscripción",
+      "Renta per cápita familiar dentro del límite establecido"
+    ],
+    "documentosRequeridos": [
+      "DNI",
+      "IRPF 2025",
+      "Inscripción Garantía Juvenil",
+      "Vida laboral"
+    ],
+    "enlace": "https://www.sepe.es/",
+    "estado": "Proximamente",
+    "dificultad": "media",
+    "resolucion_estimada": "Marzo 2027"
+  },
+  {
+    "id": "sub-039",
+    "nombre": "Cuerpo Europeo de Solidaridad 2026-2027",
+    "entidad": "Instituto de la Juventud (INJUVE)",
+    "tipo": "movilidad",
+    "comunidad": "Nacional",
+    "cantidad": "Gastos de viaje, alojamiento y manutención cubiertos",
+    "cantidadMin": 0,
+    "cantidadMax": 4000,
+    "edadMinima": 18,
+    "edadMaxima": 30,
+    "plazoApertura": "01/02/2026",
+    "plazoSolicitud": "15/10/2026",
+    "requisitos": [
+      "Edad entre 18 y 30 años",
+      "Residencia legal en España",
+      "Disponibilidad para un proyecto de voluntariado europeo de 2 a 12 meses"
+    ],
+    "documentosRequeridos": [
+      "DNI o pasaporte en vigor",
+      "Carta de motivación",
+      "Certificado de empadronamiento"
+    ],
+    "enlace": "https://www.injuve.es/",
+    "estado": "En plazo",
+    "dificultad": "media",
+    "resolucion_estimada": "Continua (por convocatorias trimestrales)"
+  },
+  {
+    "id": "sub-040",
+    "nombre": "Carné Joven Europeo 2026-2027",
+    "entidad": "Instituto de la Juventud (INJUVE)",
+    "tipo": "movilidad",
+    "comunidad": "Nacional",
+    "cantidad": "Descuentos en transporte, cultura y alojamiento (sin cuantía económica directa)",
+    "cantidadMin": 0,
+    "cantidadMax": 0,
+    "edadMinima": 14,
+    "edadMaxima": 30,
+    "plazoApertura": "01/01/2026",
+    "plazoSolicitud": "31/12/2027",
+    "requisitos": [
+      "Edad entre 14 y 30 años",
+      "Residencia en España",
+      "Pago de la tasa de expedición del carné"
+    ],
+    "documentosRequeridos": [
+      "DNI",
+      "Fotografía tipo carné",
+      "Justificante de pago de la tasa"
+    ],
+    "enlace": "https://www.injuve.es/",
+    "estado": "En plazo",
+    "dificultad": "baja",
+    "resolucion_estimada": "Emisión en 10-15 días"
+  },
+  {
+    "id": "sub-041",
+    "nombre": "Becas Erasmus+ Formación Profesional 2026-2027",
+    "entidad": "Ministerio de Educación, Formación Profesional y Deportes",
+    "tipo": "educacion",
+    "comunidad": "Nacional",
+    "cantidad": "500-1200€/mes según destino",
+    "cantidadMin": 500,
+    "cantidadMax": 1200,
+    "edadMinima": 16,
+    "edadMaxima": 30,
+    "plazoApertura": "01/04/2026",
+    "plazoSolicitud": "30/06/2026",
+    "requisitos": [
+      "Estar matriculado en un ciclo de Formación Profesional",
+      "Contar con el visto bueno del centro educativo",
+      "Nivel mínimo de idioma del país de destino"
+    ],
+    "documentosRequeridos": [
+      "DNI o pasaporte",
+      "Justificante de matrícula en FP",
+      "Carta de aceptación de la empresa/centro de destino"
+    ],
+    "enlace": "https://www.becaseducacion.gob.es/",
+    "estado": "Proximamente",
+    "dificultad": "media",
+    "resolucion_estimada": "Agosto 2026"
   }
 ]
