@@ -65,6 +65,10 @@ npx serve .
 
 Abre `http://localhost:8000` en tu navegador.
 
+## Conectar IA real al Generador de Contenido (opcional)
+
+Por defecto, el Generador de Contenido usa plantillas locales. Si quieres que use IA real (Gemini) para títulos e ideas de mayor calidad, sigue la guía paso a paso (sin terminal, solo el navegador) en [`cloudflare-worker/README.md`](cloudflare-worker/README.md). Es opcional: la herramienta funciona perfectamente sin este paso.
+
 ## Accesibilidad y rendimiento
 
 - Diseño mobile-first, probado en 375px / 768px / 1200px.
