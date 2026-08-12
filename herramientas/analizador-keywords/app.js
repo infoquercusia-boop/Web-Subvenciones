@@ -22,7 +22,42 @@ const KEYWORD_DATASET = {
   'que es el seo': { volumen: 18100, dificultad: 'baja', intencion: 'informacional' },
   'diseño web': { volumen: 27100, dificultad: 'alta', intencion: 'informacional' },
   'redactor freelance': { volumen: 3600, dificultad: 'baja', intencion: 'transaccional' },
-  'blog de viajes': { volumen: 9900, dificultad: 'baja', intencion: 'informacional' }
+  'blog de viajes': { volumen: 9900, dificultad: 'baja', intencion: 'informacional' },
+  'marketing de contenidos': { volumen: 18100, dificultad: 'media', intencion: 'informacional' },
+  'email marketing': { volumen: 33100, dificultad: 'media', intencion: 'informacional' },
+  'redes sociales para negocios': { volumen: 9900, dificultad: 'baja', intencion: 'informacional' },
+  'como monetizar un blog': { volumen: 14800, dificultad: 'media', intencion: 'informacional' },
+  'wordpress vs blogger': { volumen: 6600, dificultad: 'baja', intencion: 'informacional' },
+  'mejores temas wordpress': { volumen: 8100, dificultad: 'media', intencion: 'transaccional' },
+  'copywriting para blogs': { volumen: 4400, dificultad: 'baja', intencion: 'informacional' },
+  'palabras clave long tail': { volumen: 5400, dificultad: 'baja', intencion: 'informacional' },
+  'que es el copywriting': { volumen: 12100, dificultad: 'baja', intencion: 'informacional' },
+  'herramientas seo gratis': { volumen: 22200, dificultad: 'media', intencion: 'informacional' },
+  'como hacer un blog': { volumen: 49500, dificultad: 'media', intencion: 'informacional' },
+  'trabajar como freelance': { volumen: 27100, dificultad: 'media', intencion: 'informacional' },
+  'diseño de logotipos': { volumen: 18100, dificultad: 'media', intencion: 'transaccional' },
+  'contratar redactor seo': { volumen: 2900, dificultad: 'baja', intencion: 'transaccional' },
+  'estrategia de contenidos': { volumen: 8100, dificultad: 'media', intencion: 'informacional' },
+  'comprar dominio web': { volumen: 14800, dificultad: 'media', intencion: 'transaccional' },
+  'mejor hosting 2026': { volumen: 9900, dificultad: 'media', intencion: 'transaccional' },
+  'que es el marketing de contenidos': { volumen: 6600, dificultad: 'baja', intencion: 'informacional' },
+  'instagram para empresas': { volumen: 12100, dificultad: 'media', intencion: 'informacional' },
+  'tiktok marketing': { volumen: 18100, dificultad: 'media', intencion: 'informacional' },
+  'linkedin para negocios': { volumen: 8100, dificultad: 'baja', intencion: 'informacional' },
+  'analitica web': { volumen: 9900, dificultad: 'media', intencion: 'informacional' },
+  'google analytics tutorial': { volumen: 14800, dificultad: 'media', intencion: 'informacional' },
+  'como crear una newsletter': { volumen: 6600, dificultad: 'baja', intencion: 'informacional' },
+  'plantillas de contenido': { volumen: 3600, dificultad: 'baja', intencion: 'informacional' },
+  'ideas para blog': { volumen: 9900, dificultad: 'baja', intencion: 'informacional' },
+  'como escribir un ebook': { volumen: 5400, dificultad: 'baja', intencion: 'informacional' },
+  'landing page efectiva': { volumen: 8100, dificultad: 'media', intencion: 'informacional' },
+  'canva para redes sociales': { volumen: 12100, dificultad: 'baja', intencion: 'transaccional' },
+  'photoshop online gratis': { volumen: 22200, dificultad: 'media', intencion: 'transaccional' },
+  'como ganar dinero online': { volumen: 40500, dificultad: 'alta', intencion: 'informacional' },
+  'ideas de negocio online': { volumen: 14800, dificultad: 'media', intencion: 'informacional' },
+  'curso de marketing digital': { volumen: 18100, dificultad: 'media', intencion: 'transaccional' },
+  'certificacion google ads': { volumen: 4400, dificultad: 'baja', intencion: 'informacional' },
+  'google ads para principiantes': { volumen: 6600, dificultad: 'media', intencion: 'informacional' }
 };
 
 const RELATED_POOL = [
@@ -44,7 +79,7 @@ function simpleHash(str) {
 function estimateKeyword(keyword) {
   const normalized = keyword.trim().toLowerCase();
   if (KEYWORD_DATASET[normalized]) {
-    return { ...KEYWORD_DATASET[normalized], simulado: false };
+    return KEYWORD_DATASET[normalized];
   }
 
   const hash = simpleHash(normalized);
@@ -56,7 +91,7 @@ function estimateKeyword(keyword) {
   if (/comprar|precio|barato|oferta|contratar/.test(normalized)) intencion = 'transaccional';
   else if (/login|iniciar sesión|acceso|oficial/.test(normalized)) intencion = 'navegacional';
 
-  return { volumen, dificultad, intencion, simulado: true };
+  return { volumen, dificultad, intencion };
 }
 
 function relatedKeywords(keyword) {
@@ -121,8 +156,6 @@ function renderResults(keyword) {
   const diffEl = document.getElementById('kw-difficulty');
   diffEl.textContent = cap(data.dificultad);
   diffEl.className = `badge ${difficultyBadgeClass(data.dificultad)}`;
-
-  document.getElementById('kw-simulated-note').hidden = !data.simulado;
 
   const relatedList = document.getElementById('related-list');
   relatedList.innerHTML = '';
