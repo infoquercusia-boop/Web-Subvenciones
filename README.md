@@ -5,8 +5,7 @@ Sitio web estático con herramientas gratuitas de SEO para creadores de contenid
 ## Herramientas incluidas
 
 1. **[Generador de Títulos SEO](herramientas/generador-titulos/)** — genera 8-10 variaciones de títulos optimizados a partir de un tema, con métricas de longitud (50-60 caracteres) y detección de keywords. Permite guardar favoritos en `localStorage`.
-2. **[Analizador de Palabras Clave](herramientas/analizador-keywords/)** — muestra volumen de búsqueda estimado, intención (informacional / transaccional / navegacional), dificultad y keywords relacionadas, con una gráfica de tendencia SVG e historial guardado en `localStorage`.
-3. **[Calculadora de Tiempo de Lectura](herramientas/calculadora-lectura/)** — calcula minutos de lectura, palabras y caracteres en tiempo real, con sugerencias de longitud y exportación de texto para meta description.
+2. **[Calculadora de Tiempo de Lectura](herramientas/calculadora-lectura/)** — calcula minutos de lectura, palabras y caracteres en tiempo real, con sugerencias de longitud y exportación de texto para meta description.
 
 ## Stack técnico
 
@@ -23,7 +22,6 @@ Sitio web estático con herramientas gratuitas de SEO para creadores de contenid
 ├── index.html
 ├── herramientas/
 │   ├── generador-titulos/   (index.html, guia.html, app.js)
-│   ├── analizador-keywords/ (index.html, guia.html, app.js)
 │   └── calculadora-lectura/ (index.html, guia.html, app.js)
 ├── blog/
 │   ├── index.html
