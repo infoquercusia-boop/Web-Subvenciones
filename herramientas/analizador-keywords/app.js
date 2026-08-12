@@ -76,10 +76,43 @@ function simpleHash(str) {
   return Math.abs(hash);
 }
 
+const STOPWORDS = new Set(['de', 'la', 'el', 'en', 'y', 'a', 'los', 'las', 'un', 'una', 'para', 'con', 'del', 'que', 'por', 'sobre', 'como', 'es', 'mi', 'tu', 'su']);
+
+function significantTokens(str) {
+  return str.split(/\s+/).filter((w) => w.length > 2 && !STOPWORDS.has(w));
+}
+
+/** Busca la keyword del dataset con más palabras en común con la búsqueda del usuario */
+function findClosestMatch(normalized) {
+  const tokens = significantTokens(normalized);
+  if (tokens.length === 0) return null;
+
+  let best = null;
+  let bestScore = 0;
+
+  for (const key of Object.keys(KEYWORD_DATASET)) {
+    const keyTokens = significantTokens(key);
+    const shared = keyTokens.filter((t) => tokens.includes(t)).length;
+    if (shared === 0) continue;
+    const score = shared / Math.max(tokens.length, keyTokens.length);
+    if (score > bestScore) {
+      bestScore = score;
+      best = key;
+    }
+  }
+
+  return bestScore >= 0.34 ? best : null;
+}
+
 function estimateKeyword(keyword) {
   const normalized = keyword.trim().toLowerCase();
   if (KEYWORD_DATASET[normalized]) {
     return KEYWORD_DATASET[normalized];
+  }
+
+  const closest = findClosestMatch(normalized);
+  if (closest) {
+    return KEYWORD_DATASET[closest];
   }
 
   const hash = simpleHash(normalized);
