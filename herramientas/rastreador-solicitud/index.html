@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rastreador de Solicitud de Subvención 2026 | Subvenciones Jóvenes</title>
+<meta name="description" content="Calcula la fecha estimada de cierre, resolución y pago de tu subvención 2026 y guarda avisos de tus fechas clave.">
+<link rel="canonical" href="https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/rastreador-solicitud/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rastreador de Solicitud de Subvención 2026">
+<meta property="og:description" content="Timeline interactiva con tus fechas clave: cierre, resolución y pago.">
+<meta property="og:url" content="https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/rastreador-solicitud/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a4d8f%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22sans-serif%22>S</text></svg>">
+<link rel="stylesheet" href="/web-tecnologia-ads/css/variables.css">
+<link rel="stylesheet" href="/web-tecnologia-ads/css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rastreador de Solicitud de Subvención",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "url": "https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/rastreador-solicitud/",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Navegación principal">
+    <a href="/web-tecnologia-ads/" class="nav__brand">
+      <span class="nav__brand-icon" aria-hidden="true">S</span>
+      Subvenciones Jóvenes
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Abrir menú</span>☰
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/web-tecnologia-ads/guias/">Guías</a></li>
+      <li><a href="/web-tecnologia-ads/herramientas/" aria-current="page">Herramientas</a></li>
+      <li><a href="/web-tecnologia-ads/directorio/">Directorio</a></li>
+      <li><a href="/web-tecnologia-ads/blog/">Blog</a></li>
+      <li><a href="/web-tecnologia-ads/sobre.html">Sobre</a></li>
+      <li><a href="/web-tecnologia-ads/directorio/" class="nav__cta">Buscar subvención</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumbs"><a href="/web-tecnologia-ads/">Inicio</a> / <a href="/web-tecnologia-ads/herramientas/">Herramientas</a> / Rastreador de solicitud</p>
+      <h1>Rastreador de Solicitud (Timeline Interactivo)</h1>
+      <p class="lead text-muted">Introduce la fecha en la que presentaste (o vas a presentar) tu solicitud y el tipo de subvención, y calculamos automáticamente tu timeline estimada.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;">
+        <div class="tool-panel">
+          <form id="track-form" novalidate>
+            <div class="form-group">
+              <label for="fecha-presentacion">Fecha de presentación de la solicitud</label>
+              <input type="date" id="fecha-presentacion" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="tipo-tracker">Tipo de subvención</label>
+              <select id="tipo-tracker" name="tipo" required>
+                <option value="emprendimiento">Emprendimiento</option>
+                <option value="educacion">Educación</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="movilidad">Movilidad</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Calcular mi timeline</button>
+          </form>
+
+          <div id="track-result" style="display:none;"></div>
+
+          <div class="flex flex-wrap gap-3" style="margin-top: var(--space-5);">
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-guardar-tracker">Guardar aviso de esta solicitud</button>
+          </div>
+          <p class="hint" id="tracker-status" role="status" aria-live="polite"></p>
+
+          <div id="saved-trackers" style="margin-top: var(--space-6);"></div>
+        </div>
+
+        <aside>
+          <div class="callout callout-tip">
+            <h4>Plazos orientativos 2026-2027</h4>
+            <p>Los plazos de resolución varían según el organismo. Usamos plazos medios típicos de cada tipo de subvención en la convocatoria 2026-2027. La fecha de pago se calcula solo si la solicitud está dentro de plazo.</p>
+          </div>
+          <div class="card">
+            <h3>¿Aún no has presentado tu solicitud?</h3>
+            <p>Comprueba primero que cumples los requisitos con la calculadora de elegibilidad.</p>
+            <a class="btn btn-secondary btn-block" href="/web-tecnologia-ads/herramientas/calculadora-elegibilidad/">Ir a la calculadora</a>
+          </div>
+          <p style="margin-top: var(--space-5);"><a href="/web-tecnologia-ads/herramientas/rastreador-solicitud/guia.html">Ver guía de uso de esta herramienta →</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Subvenciones Jóvenes es un proyecto informativo independiente. No somos una administración pública ni gestionamos solicitudes: te ayudamos a entender los procesos y enlazamos siempre a las fuentes oficiales. Verifica requisitos y plazos en el organismo convocante antes de presentar tu solicitud.</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Subvenciones Jóvenes</h4>
+        <p style="font-size: var(--fs-sm);">Guías, herramientas y directorio de subvenciones para jóvenes en España, actualizado a 2026-2027.</p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/guias/">Guías</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/">Herramientas</a></li>
+          <li><a href="/web-tecnologia-ads/directorio/">Directorio</a></li>
+          <li><a href="/web-tecnologia-ads/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Herramientas</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/herramientas/checklist-documentos/">Checklist documentos</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/calculadora-elegibilidad/">Calculadora elegibilidad</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/rastreador-solicitud/">Rastreador solicitud</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/sobre.html">Sobre nosotros</a></li>
+          <li><a href="/web-tecnologia-ads/contacto.html">Contacto</a></li>
+          <li><a href="/web-tecnologia-ads/privacidad.html">Privacidad</a></li>
+          <li><a href="/web-tecnologia-ads/cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Subvenciones Jóvenes. Todos los derechos reservados.</span>
+      <span>Hecho con HTML, CSS y JavaScript vanilla · Sin backend</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/web-tecnologia-ads/js/utils.js"></script>
+<script src="/web-tecnologia-ads/herramientas/rastreador-solicitud/app.js"></script>
+</body>
+</html>

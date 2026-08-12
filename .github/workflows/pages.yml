@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/creator-tools-github-pages-1jqdhe
+      - claude/subvenciones-jovenes-web-sekbhs
+      - main
   workflow_dispatch:
 
 permissions:

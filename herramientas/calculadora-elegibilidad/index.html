@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Elegibilidad para Subvenciones 2026 | Subvenciones Jóvenes</title>
+<meta name="description" content="Responde 5 preguntas sobre tu edad, comunidad, ingresos 2025 y situación laboral y descubre al instante si eres elegible para una subvención en 2026.">
+<link rel="canonical" href="https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/calculadora-elegibilidad/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Elegibilidad para Subvenciones 2026">
+<meta property="og:description" content="Descubre en segundos si cumples los requisitos para una subvención de jóvenes en 2026.">
+<meta property="og:url" content="https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/calculadora-elegibilidad/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a4d8f%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22sans-serif%22>S</text></svg>">
+<link rel="stylesheet" href="/web-tecnologia-ads/css/variables.css">
+<link rel="stylesheet" href="/web-tecnologia-ads/css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Elegibilidad para Subvenciones",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "url": "https://infoquercusia-boop.github.io/web-tecnologia-ads/herramientas/calculadora-elegibilidad/",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Navegación principal">
+    <a href="/web-tecnologia-ads/" class="nav__brand">
+      <span class="nav__brand-icon" aria-hidden="true">S</span>
+      Subvenciones Jóvenes
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Abrir menú</span>☰
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/web-tecnologia-ads/guias/">Guías</a></li>
+      <li><a href="/web-tecnologia-ads/herramientas/" aria-current="page">Herramientas</a></li>
+      <li><a href="/web-tecnologia-ads/directorio/">Directorio</a></li>
+      <li><a href="/web-tecnologia-ads/blog/">Blog</a></li>
+      <li><a href="/web-tecnologia-ads/sobre.html">Sobre</a></li>
+      <li><a href="/web-tecnologia-ads/directorio/" class="nav__cta">Buscar subvención</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumbs"><a href="/web-tecnologia-ads/">Inicio</a> / <a href="/web-tecnologia-ads/herramientas/">Herramientas</a> / Calculadora de elegibilidad</p>
+      <h1>Calculadora de Elegibilidad Rápida</h1>
+      <p class="lead text-muted">Responde estas 5 preguntas y descubre al instante si eres elegible para una subvención en 2026, con explicación clara de cada requisito.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;">
+        <div class="tool-panel">
+          <form id="elig-form" novalidate>
+            <div class="form-group">
+              <label for="edad">Tu edad</label>
+              <input type="number" id="edad" name="edad" min="14" max="99" required inputmode="numeric">
+            </div>
+
+            <div class="form-group">
+              <label for="comunidad">Comunidad autónoma</label>
+              <select id="comunidad" name="comunidad" required>
+                <option value="">Selecciona tu comunidad</option>
+                <option>Andalucía</option>
+                <option>Aragón</option>
+                <option>Canarias</option>
+                <option>Castilla y León</option>
+                <option>Cataluña</option>
+                <option>Comunidad Valenciana</option>
+                <option>Galicia</option>
+                <option>Madrid</option>
+                <option>País Vasco</option>
+                <option>Otra comunidad autónoma</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tipo">Tipo de subvención</label>
+              <select id="tipo" name="tipo" required>
+                <option value="emprendimiento">Emprendimiento</option>
+                <option value="educacion">Educación</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="movilidad">Movilidad</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ingresos">Ingresos anuales 2025 (€)</label>
+              <input type="number" id="ingresos" name="ingresos" min="0" step="100" required inputmode="numeric">
+              <p class="hint">Base imponible general de tu declaración de la Renta 2025, o ingresos brutos si no la presentaste.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="situacion">Situación laboral</label>
+              <select id="situacion" name="situacion" required>
+                <option value="desempleado">Desempleado/a</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="autonomo">Autónomo/a</option>
+                <option value="empleado">Empleado/a por cuenta ajena</option>
+                <option value="inactivo">Ninguna de las anteriores</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Comprobar mi elegibilidad</button>
+          </form>
+
+          <div id="resultado" style="display:none;"></div>
+
+          <div class="flex flex-wrap gap-3" style="margin-top: var(--space-5);">
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-guardar-perfil">Guardar este perfil</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-cargar-perfil">Cargar último perfil guardado</button>
+          </div>
+          <p class="hint" id="perfil-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <aside>
+          <div class="callout callout-tip">
+            <h4>Orientativo, no vinculante</h4>
+            <p>Esta calculadora aplica reglas generales de las convocatorias 2026-2027. El resultado es orientativo: cada convocatoria concreta puede tener matices adicionales. Verifica siempre las bases oficiales antes de presentar tu solicitud.</p>
+          </div>
+          <div class="card">
+            <h3>¿Ya sabes que eres elegible?</h3>
+            <p>Prepara tu documentación con el checklist interactivo antes de presentar la solicitud.</p>
+            <a class="btn btn-secondary btn-block" href="/web-tecnologia-ads/herramientas/checklist-documentos/">Ir al checklist</a>
+          </div>
+          <p style="margin-top: var(--space-5);"><a href="/web-tecnologia-ads/herramientas/calculadora-elegibilidad/guia.html">Ver guía de uso de esta herramienta →</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Subvenciones Jóvenes es un proyecto informativo independiente. No somos una administración pública ni gestionamos solicitudes: te ayudamos a entender los procesos y enlazamos siempre a las fuentes oficiales. Verifica requisitos y plazos en el organismo convocante antes de presentar tu solicitud.</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Subvenciones Jóvenes</h4>
+        <p style="font-size: var(--fs-sm);">Guías, herramientas y directorio de subvenciones para jóvenes en España, actualizado a 2026-2027.</p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/guias/">Guías</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/">Herramientas</a></li>
+          <li><a href="/web-tecnologia-ads/directorio/">Directorio</a></li>
+          <li><a href="/web-tecnologia-ads/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Herramientas</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/herramientas/checklist-documentos/">Checklist documentos</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/calculadora-elegibilidad/">Calculadora elegibilidad</a></li>
+          <li><a href="/web-tecnologia-ads/herramientas/rastreador-solicitud/">Rastreador solicitud</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/web-tecnologia-ads/sobre.html">Sobre nosotros</a></li>
+          <li><a href="/web-tecnologia-ads/contacto.html">Contacto</a></li>
+          <li><a href="/web-tecnologia-ads/privacidad.html">Privacidad</a></li>
+          <li><a href="/web-tecnologia-ads/cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Subvenciones Jóvenes. Todos los derechos reservados.</span>
+      <span>Hecho con HTML, CSS y JavaScript vanilla · Sin backend</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/web-tecnologia-ads/js/utils.js"></script>
+<script src="/web-tecnologia-ads/herramientas/calculadora-elegibilidad/app.js"></script>
+</body>
+</html>

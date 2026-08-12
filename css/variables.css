@@ -1,76 +1,80 @@
 /* ==========================================================================
-   Variables globales — colores, tipografía, espaciado
-   Cambia estos valores para retemizar todo el sitio.
+   Variables globales — Guías y Herramientas de Subvenciones para Jóvenes
    ========================================================================== */
 :root {
-  /* Color de acento (verde) */
-  --color-accent: #0a8f5b;
-  --color-accent-dark: #076b44;
-  --color-accent-light: #e6f6ef;
-  --color-accent-contrast: #ffffff;
+  /* Paleta principal: azul/gris, profesional y accesible */
+  --color-primary-900: #0b2545;
+  --color-primary-800: #123a6b;
+  --color-primary-700: #1a4d8f;
+  --color-primary-600: #2563a8;
+  --color-primary-500: #3178c6;
+  --color-primary-400: #5a9bdc;
+  --color-primary-100: #e3edf9;
+  --color-primary-50: #f2f7fd;
 
-  /* Escala de grises */
+  --color-accent-600: #0f9d78;
+  --color-accent-500: #16b98f;
+  --color-accent-100: #e0f7f0;
+
+  --color-warning-600: #b5790a;
+  --color-warning-100: #fdf1dd;
+
+  --color-danger-600: #c62b3a;
+  --color-danger-100: #fce6e8;
+
+  --color-gray-900: #16202b;
+  --color-gray-800: #26333f;
+  --color-gray-700: #3d4c5a;
+  --color-gray-600: #5a6b7a;
+  --color-gray-500: #7c8b98;
+  --color-gray-300: #c3ccd3;
+  --color-gray-200: #dde3e8;
+  --color-gray-100: #eef1f4;
+  --color-gray-50: #f7f9fb;
   --color-white: #ffffff;
-  --color-gray-50: #f8f9fa;
-  --color-gray-100: #f1f3f5;
-  --color-gray-200: #e9ecef;
-  --color-gray-300: #dee2e6;
-  --color-gray-400: #ced4da;
-  --color-gray-500: #adb5bd;
-  --color-gray-600: #6c757d;
-  --color-gray-700: #495057;
-  --color-gray-800: #343a40;
-  --color-gray-900: #212529;
 
-  /* Semánticos */
   --color-bg: var(--color-white);
   --color-bg-alt: var(--color-gray-50);
   --color-text: var(--color-gray-900);
-  --color-text-muted: var(--color-gray-700);
+  --color-text-muted: var(--color-gray-600);
   --color-border: var(--color-gray-200);
-  --color-error: #c0392b;
-  --color-warning: #b8860b;
-  --color-success: var(--color-accent);
+  --color-link: var(--color-primary-700);
+  --color-link-hover: var(--color-primary-900);
 
   /* Tipografía */
-  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
 
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-md: 1.125rem;
-  --fs-lg: 1.375rem;
-  --fs-xl: 1.75rem;
-  --fs-2xl: 2.25rem;
-  --fs-3xl: 2.75rem;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.875rem;
+  --fs-3xl: 2.375rem;
+  --fs-4xl: 3rem;
 
-  --lh-tight: 1.2;
-  --lh-normal: 1.6;
-
-  /* Espaciado (escala 4px) */
+  /* Espaciado */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
   --space-5: 1.5rem;
   --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
 
-  /* Bordes / sombras */
+  /* Radios y sombras */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 3px rgba(16, 30, 54, 0.08);
+  --shadow-md: 0 6px 20px rgba(16, 30, 54, 0.10);
+  --shadow-lg: 0 12px 32px rgba(16, 30, 54, 0.14);
 
-  /* Layout */
-  --max-width: 1100px;
-  --max-width-narrow: 760px;
-
-  /* Transiciones */
+  --container-max: 1180px;
   --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --transition-base: 220ms ease;
 }
