@@ -129,13 +129,13 @@
       if (alternativas.length) {
         html += '<div class="callout callout-tip"><h4>Prueba con otra subvención</h4><p>Con tu perfil actual, sí podrías ser elegible para: <strong>' + alternativas.join(", ") + "</strong>. Cambia el tipo de subvención arriba y vuelve a comprobarlo.</p></div>";
       } else {
-        html += '<div class="callout callout-warning"><h4>Ninguna categoría encaja todavía</h4><p>Con los datos introducidos no encontramos otra categoría del directorio en la que encajes. Consulta el <a href="/web-tecnologia-ads/directorio/">directorio completo</a> por si hay una convocatoria específica de tu comunidad autónoma con requisitos distintos.</p></div>';
+        html += '<div class="callout callout-warning"><h4>Ninguna categoría encaja todavía</h4><p>Con los datos introducidos no encontramos otra categoría del directorio en la que encajes. Consulta el <a href="/Web-Subvenciones/directorio/">directorio completo</a> por si hay una convocatoria específica de tu comunidad autónoma con requisitos distintos.</p></div>';
       }
     }
 
     html += '<div class="flex flex-wrap gap-3" style="margin-top: var(--space-4);">';
-    html += '<a class="btn btn-primary" href="/web-tecnologia-ads/directorio/">Ver subvenciones de ' + rule.label.toLowerCase() + " en el directorio</a>";
-    html += '<a class="btn btn-secondary" href="/web-tecnologia-ads/herramientas/checklist-documentos/">Preparar documentación</a>';
+    html += '<a class="btn btn-primary" href="/Web-Subvenciones/directorio/">Ver subvenciones de ' + rule.label.toLowerCase() + " en el directorio</a>";
+    html += '<a class="btn btn-secondary" href="/Web-Subvenciones/herramientas/checklist-documentos/">Preparar documentación</a>';
     html += "</div>";
     html += "</div>";
 

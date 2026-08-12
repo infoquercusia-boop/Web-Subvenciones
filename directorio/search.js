@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var DATA_URL = "/web-tecnologia-ads/directorio/data.json";
+  var DATA_URL = "/Web-Subvenciones/directorio/data.json";
   var STORAGE_KEY = "sj_directorio_filtros";
 
   var allSubs = [];
@@ -219,7 +219,7 @@
       '<h4>Documentos requeridos</h4><ul>' + documentosHtml + '</ul>' +
       '<div class="flex gap-3 flex-wrap" style="margin-top: var(--space-5);">' +
         '<a class="btn btn-primary" href="' + esc(sub.enlace) + '" target="_blank" rel="noopener noreferrer">Ir a la web oficial</a>' +
-        '<a class="btn btn-accent" href="/web-tecnologia-ads/herramientas/rastreador-solicitud/?tipo=' + encodeURIComponent(sub.tipo) + '">Rastrear esta solicitud</a>' +
+        '<a class="btn btn-accent" href="/Web-Subvenciones/herramientas/rastreador-solicitud/?tipo=' + encodeURIComponent(sub.tipo) + '">Rastrear esta solicitud</a>' +
       '</div>';
 
     if (typeof els.dialog.showModal === "function") {

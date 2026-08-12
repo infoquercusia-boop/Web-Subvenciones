@@ -62,7 +62,7 @@ Sitio web estático con guías paso a paso, herramientas interactivas y un direc
 
 ### Importante: rutas absolutas
 
-Todas las páginas usan rutas absolutas con el prefijo `/web-tecnologia-ads/` (por ejemplo `/web-tecnologia-ads/css/main.css`) porque el sitio se publica en un *project page* de GitHub Pages (`usuario.github.io/web-tecnologia-ads/`), no en un dominio raíz. **Si cambias el nombre del repositorio o usas un dominio propio**, actualiza ese prefijo en todos los archivos HTML/JS y en `sitemap.xml`/`robots.txt`.
+Todas las páginas usan rutas absolutas con el prefijo `/Web-Subvenciones/` (por ejemplo `/Web-Subvenciones/css/main.css`) porque el sitio se publica en un *project page* de GitHub Pages (`usuario.github.io/Web-Subvenciones/`), no en un dominio raíz. **Si cambias el nombre del repositorio o usas un dominio propio**, actualiza ese prefijo en todos los archivos HTML/JS y en `sitemap.xml`/`robots.txt`.
 
 ### Antes de publicar
 
@@ -80,7 +80,7 @@ python3 -m http.server 8000
 npx serve .
 ```
 
-Abre `http://localhost:8000/web-tecnologia-ads/` si replicas la estructura de subcarpeta, o ajusta temporalmente los prefijos `/web-tecnologia-ads/` a rutas relativas para pruebas en local en la raíz.
+Abre `http://localhost:8000/Web-Subvenciones/` si replicas la estructura de subcarpeta, o ajusta temporalmente los prefijos `/Web-Subvenciones/` a rutas relativas para pruebas en local en la raíz.
 
 ## Accesibilidad y rendimiento
 

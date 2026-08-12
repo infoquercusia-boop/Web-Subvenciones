@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://infoquercusia-boop.github.io/web-tecnologia-ads/sitemap.xml
+Sitemap: https://infoquercusia-boop.github.io/Web-Subvenciones/sitemap.xml
