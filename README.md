@@ -4,9 +4,8 @@ Sitio web estático con herramientas gratuitas de SEO para creadores de contenid
 
 ## Herramientas incluidas
 
-1. **[Generador de Títulos SEO](herramientas/generador-titulos/)** — genera 8-10 variaciones de títulos optimizados a partir de un tema, con métricas de longitud (50-60 caracteres) y detección de keywords. Permite guardar favoritos en `localStorage`.
-2. **[Generador de Ideas de Contenido](herramientas/generador-ideas/)** — genera 15-20 ideas de artículos en distintos formatos (listicle, guía, comparativa, FAQ, caso de estudio...) a partir de un tema. Permite guardar favoritas en `localStorage`.
-3. **[Calculadora de Tiempo de Lectura](herramientas/calculadora-lectura/)** — calcula minutos de lectura, palabras y caracteres en tiempo real, con sugerencias de longitud y exportación de texto para meta description.
+1. **[Generador de Contenido SEO](herramientas/generador-contenido/)** — genera títulos SEO e ideas de artículos a la vez a partir de un tema. Usa IA real (Gemini, vía un Cloudflare Worker propio) cuando está configurada, con generación local por plantillas como respaldo. Permite guardar títulos e ideas favoritos por separado en `localStorage`.
+2. **[Calculadora de Tiempo de Lectura](herramientas/calculadora-lectura/)** — calcula minutos de lectura, palabras y caracteres en tiempo real, con sugerencias de longitud y exportación de texto para meta description.
 
 ## Stack técnico
 
@@ -22,8 +21,7 @@ Sitio web estático con herramientas gratuitas de SEO para creadores de contenid
 /
 ├── index.html
 ├── herramientas/
-│   ├── generador-titulos/   (index.html, guia.html, app.js)
-│   ├── generador-ideas/     (index.html, guia.html, app.js)
+│   ├── generador-contenido/ (index.html, guia.html, app.js)
 │   └── calculadora-lectura/ (index.html, guia.html, app.js)
 ├── blog/
 │   ├── index.html
